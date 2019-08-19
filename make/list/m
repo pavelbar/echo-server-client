@@ -1,0 +1,2 @@
+all:
+	gcc -g makeServer.c lifecycle.c mVec.c transport.c -o hello
