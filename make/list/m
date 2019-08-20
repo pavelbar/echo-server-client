@@ -25,3 +25,9 @@ clean:
 	rm $(OBJECTS)
 	
 $(shell bash db.sh)
+
+CC=gcc
+CFLAGS= -g -L.
+SOURCES=makeServer.c lifecycle.c mVec.c transport.c
+OBJECTS=$(SOURCES:.c=.o)
+EXECUTABLE=echoserver  
