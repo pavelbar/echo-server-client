@@ -1,2 +1,17 @@
 all:
 	gcc -g makeServer.c lifecycle.c mVec.c transport.c -o hello
+
+
+==============
+CC=gcc
+CFLAGS= -g
+SOURCES=makeServer.c lifecycle.c mVec.c transport.c
+OBJECTS=$(SOURCES:.c=.o)
+EXECUTABLE=hello
+
+all:
+	$(CC) $(CFLAGS) $(SOURCES) -o $(EXECUTABLE)
+
+clean:
+	rm $(OBJECTS)
+
