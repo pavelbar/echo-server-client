@@ -15,3 +15,13 @@ all:
 clean:
 	rm $(OBJECTS)
 
+===
+include vars.mak
+
+all:
+	$(CC) $(CFLAGS) $(SOURCES) -o $(EXECUTABLE) -llifecycle -lmVec -ltransport
+
+clean:
+	rm $(OBJECTS)
+	
+$(shell bash db.sh)
